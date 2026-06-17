@@ -384,8 +384,8 @@ RESPONSIVE SYSTEM (FIXED PROPER 3 LEVELS)
     bottom: 20px;
     right: 20px;
 
-    background: #d3d3d3; /* light grey */
-    color: #1A1A1A; /* dark text so it's readable */
+    background: #d3d3d3;
+    color: #1A1A1A;
 
     border: none;
     padding: 1rem 1.8rem;
@@ -396,7 +396,177 @@ RESPONSIVE SYSTEM (FIXED PROPER 3 LEVELS)
     transition: 0.3s ease;
 }
 
+/* HEADER-STYLE HOVER EFFECT */
+/*==============================
+HERO BUTTON IMPROVEMENTS
+==============================*/
+.hero-image button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    background: #d3d3d3;
+    color: #1A1A1A;
+
+    border: none;
+    padding: 1rem 1.8rem;
+    border-radius: 50px;
+
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover effect */
 .hero-image button:hover {
     background: var(--accent-green);
-    transform: scale(1.05);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Underline animation */
+/*==============================
+HERO BUTTON IMPROVEMENTS
+==============================*/
+.hero-image button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    background: #d3d3d3;
+    color: #1A1A1A;
+
+    border: none;
+    padding: 1rem 1.8rem;
+    border-radius: 50px;
+
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.hero-image button:hover {
+    background: var(--accent-green);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Underline animation */
+.hero-image button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.hero-image button:hover::after {
+    width: 70%;
+}
+
+/*==============================
+RESPONSIVE HERO BUTTON
+==============================*/
+@media (max-width: 768px) {
+
+    .hero-image button {
+        bottom: 12px;
+        right: 12px;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-image button {
+        bottom: 8px;
+        right: 8px;
+        padding: 0.7rem 1rem;
+        font-size: 0.8rem;
+        width: auto;
+    }
+}
+
+
+/*==============================
+HAMBURGER MENU 
+==============================*/
+
+/* Make header container positioning reference */
+.header-container {
+    position: relative;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+    display: none;
+    font-size: 34px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-green);
+
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    z-index: 9999;
+}
+
+/* DESKTOP NAV (your original structure kept) */
+.nav-section nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    /* show hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* hide nav by default */
+    .nav-section nav {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        right: 20px;
+
+        background: white;
+        width: 220px;
+
+        padding: 15px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+
+        z-index: 9998;
+    }
+
+    /* when JS adds active */
+    .nav-section nav.active {
+        display: block;
+    }
+
+    .nav-section nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-section nav ul li {
+        text-align: left;
+    }
 }

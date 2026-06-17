@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!--CSS Link-->
     <link rel="stylesheet" href="CSS/style.css">
@@ -30,9 +30,14 @@
                     <h1>Charles Greenway</h1>
                 </div>
 
+                <!-- Hamburger Button -->
+                <button class="hamburger" id="hamburger">
+                    ☰
+                </button>
+
                 <!--Navigation-->
                 <div class="nav-section">
-                    <nav>
+                    <nav class="nav" id="nav">
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About</a></li>
@@ -143,6 +148,16 @@
         </footer>
 
     </div>
+
+    <!--JavaScript for Hamburger Menu-->
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.getElementById("nav");
+
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
 
 </body>
 </html>
