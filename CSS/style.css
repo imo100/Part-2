@@ -70,8 +70,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
     flex-wrap: wrap;
+
+    width: 100%;
+    padding: 0.8rem 1.5rem;
 }
 
 /* LOGO */
@@ -370,4 +373,30 @@ RESPONSIVE SYSTEM (FIXED PROPER 3 LEVELS)
     .logo-section h1 {
         font-size: 1.5rem;
     }
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    background: #d3d3d3; /* light grey */
+    color: #1A1A1A; /* dark text so it's readable */
+
+    border: none;
+    padding: 1rem 1.8rem;
+    border-radius: 50px;
+
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.hero-image button:hover {
+    background: var(--accent-green);
+    transform: scale(1.05);
 }
