@@ -30,9 +30,14 @@
                     <h1>Charles Greenway</h1>
                 </div>
 
+                <!-- Hamburger Button -->
+                <button class="hamburger" id="hamburger">
+                    ☰
+                </button>
+
                 <!--Navigation-->
                 <div class="nav-section">
-                    <nav>
+                    <nav class="nav" id="nav">
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About</a></li>
@@ -55,7 +60,12 @@
 
                 <!--Hero Image-->
                 <div class="hero-image">
-                   <img src="Images/Hero.jpg" alt="Hero Image">
+                    <img src="Images/Hero.jpg" alt="Hero Image">
+
+                    <!-- Enquire Button on Image -->
+                    <a href="enquiry.html">
+                        <button type="button">Enquire Now</button>
+                    </a>
                 </div>
 
                 <!--Hero Content-->
@@ -72,12 +82,6 @@
                     <p>
                         Contact us today for professional gardening services.
                     </p>
-
-                    <!-- Enquire\ Hero Button -->
-                    <a href="enquiry.html">
-                        <button type="button">Enquire Now</button>
-                    </a>
-
                 </div>
 
             </section>
@@ -94,6 +98,16 @@
         </footer>
 
     </div>
+
+    <!--JavaScript for Hamburger Menu-->
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.getElementById("nav");
+
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
 
 </body>
 </html>
