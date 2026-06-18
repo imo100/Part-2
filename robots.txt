@@ -1,0 +1,11 @@
+# Allow all search engines to index the site
+User-agent: *
+
+# Allow all pages
+Allow: /
+
+# Block nothing important (site is fully accessible)
+Disallow:
+
+# Sitemap location (IMPORTANT for SEO)
+Sitemap: https://yourdomain.com/sitemap.xml
