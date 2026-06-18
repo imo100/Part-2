@@ -1,124 +1,101 @@
+// ==============================
+// GALLERY LIGHTBOX
+// ==============================
 
-// ==============================
-// FOOTER DATE (DYNAMIC CONTENT)
-// ==============================
-const currentDate = new Date();
-document.getElementById("footer-info").innerText =
-  `Today's date: ${currentDate.toLocaleDateString()} | Year: ${currentDate.getFullYear()}`;
-
-// ==============================
-// GALLERY SYSTEM (LIGHTBOX)
-// ==============================
-const images = [
-  "Images/Hero.jpg",
-  "Images/Img1.jpg",
-  "Images/Img2.jpg",
-  "Images/Img3.jpg",
-  "Images/Img4.jpg",
-  "Images/Img5.jpg"
-];
-
-const gallery = document.getElementById("gallery");
+const galleryImages = document.querySelectorAll(".gallery img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const caption = document.getElementById("caption");
 
+const closeBtn = document.querySelector(".close");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
 let currentIndex = 0;
 
-images.forEach((src, index) => {
-  const img = document.createElement("img");
-  img.src = src;
-  img.alt = `Garden Image ${index + 1}`;
-
-  img.addEventListener("click", () => openLightbox(index));
-  gallery.appendChild(img);
-});
-
+// Open image
 function openLightbox(index) {
-  currentIndex = index;
-  lightbox.style.display = "flex";
-  updateImage();
+    currentIndex = index;
+
+    lightboxImg.src = galleryImages[currentIndex].src;
+    lightboxImg.alt = galleryImages[currentIndex].alt;
+
+    caption.textContent = galleryImages[currentIndex].alt;
+
+    lightbox.style.display = "flex";
 }
 
-function updateImage() {
-  lightboxImg.src = images[currentIndex];
-  caption.textContent = `Image ${currentIndex + 1} of ${images.length}`;
-}
-
+// Close image
 function closeLightbox() {
-  lightbox.style.display = "none";
+    lightbox.style.display = "none";
 }
 
-function changeImage(direction) {
-  currentIndex += direction;
+// Show next image
+function nextImage() {
+    currentIndex++;
 
-  if (currentIndex < 0) currentIndex = images.length - 1;
-  if (currentIndex >= images.length) currentIndex = 0;
+    if (currentIndex >= galleryImages.length) {
+        currentIndex = 0;
+    }
 
-  updateImage();
+    updateImage();
 }
+
+// Show previous image
+function previousImage() {
+    currentIndex--;
+
+    if (currentIndex < 0) {
+        currentIndex = galleryImages.length - 1;
+    }
+
+    updateImage();
+}
+
+// Update image
+function updateImage() {
+    lightboxImg.src = galleryImages[currentIndex].src;
+    lightboxImg.alt = galleryImages[currentIndex].alt;
+
+    caption.textContent = galleryImages[currentIndex].alt;
+}
+
+// Add click event to every gallery image
+galleryImages.forEach((img, index) => {
+    img.addEventListener("click", () => {
+        openLightbox(index);
+    });
+});
 
 // Buttons
-document.querySelector(".close").onclick = closeLightbox;
-document.querySelector(".prev").onclick = () => changeImage(-1);
-document.querySelector(".next").onclick = () => changeImage(1);
+closeBtn.addEventListener("click", closeLightbox);
 
+nextBtn.addEventListener("click", nextImage);
+
+prevBtn.addEventListener("click", previousImage);
+
+// Click outside image
 lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) closeLightbox();
+    if (e.target === lightbox) {
+        closeLightbox();
+    }
 });
 
-// ==============================
-// FORM VALIDATION (ENQUIRY)
-// ==============================
-const enquiryForm = document.querySelector(".enquiry-form");
+// Keyboard navigation
+document.addEventListener("keydown", (e) => {
 
-if (enquiryForm) {
-  enquiryForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+    if (lightbox.style.display !== "flex") return;
 
-    const name = enquiryForm.name.value.trim();
-    const email = enquiryForm.email.value.trim();
-    const phone = enquiryForm.phone.value.trim();
-
-    if (name.length < 3) {
-      alert("Name must be at least 3 characters");
-      return;
+    if (e.key === "ArrowRight") {
+        nextImage();
     }
 
-    if (!email.includes("@")) {
-      alert("Enter a valid email");
-      return;
+    if (e.key === "ArrowLeft") {
+        previousImage();
     }
 
-    if (phone.length < 10) {
-      alert("Enter a valid phone number");
-      return;
+    if (e.key === "Escape") {
+        closeLightbox();
     }
 
-    alert("Enquiry submitted successfully!");
-    enquiryForm.reset();
-  });
-}
-
-// ==============================
-// FORM VALIDATION (CONTACT)
-// ==============================
-const contactForm = document.querySelector("form");
-
-if (contactForm && !contactForm.classList.contains("enquiry-form")) {
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = contactForm.querySelector("input[type='text']").value;
-    const email = contactForm.querySelector("input[type='email']").value;
-    const message = contactForm.querySelector("textarea").value;
-
-    if (name === "" || email === "" || message === "") {
-      alert("All fields are required");
-      return;
-    }
-
-    alert("Message sent successfully!");
-    contactForm.reset();
-  });
-}
+});
