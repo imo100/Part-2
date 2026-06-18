@@ -99,3 +99,28 @@ document.addEventListener("keydown", (e) => {
     }
 
 });
+
+// ==============================
+// SERVICE SEARCH FILTER
+// ==============================
+
+const searchInput = document.getElementById("serviceSearch");
+const serviceList = document.getElementById("serviceList");
+
+if (searchInput && serviceList) {
+  const items = serviceList.getElementsByTagName("li");
+
+  searchInput.addEventListener("keyup", function () {
+    const filter = searchInput.value.toLowerCase();
+
+    for (let i = 0; i < items.length; i++) {
+      const text = items[i].textContent.toLowerCase();
+
+      if (text.includes(filter)) {
+        items[i].style.display = "";
+      } else {
+        items[i].style.display = "none";
+      }
+    }
+  });
+}
