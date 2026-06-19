@@ -4,145 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!--CSS Link-->
     <link rel="stylesheet" href="CSS/style.css">
 
-    <title>Enquiry | Book Gardening Services Cape Town</title>
+    <title>Contact Us | Charles Greenway Gardening Cape Town</title>
 
-<meta name="description" content="Submit an enquiry to book professional gardening services with Charles Greenway in Cape Town. Get quotes for lawn care, trimming, and maintenance.">
-
-<meta name="keywords" content="gardening enquiry, book gardener Cape Town, garden service quote, landscaping booking South Africa">
-
-<meta name="author" content="Charles Greenway">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO TAGS -->
+    <meta name="description" content="Contact Charles Greenway for professional gardening and landscaping services in Cape Town. Email or call us for fast support and enquiries.">
+    <meta name="keywords" content="contact gardener Cape Town, landscaping contact, garden services email, Cape Town gardening company">
+    <meta name="author" content="Charles Greenway">
 </head>
 
 <body>
 
-    <!--Container-->
-    <div class="container">
+<div class="container">
 
-        <!--Header-->
-        <header>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
 
-            <!--Header Container-->
-            <div class="header-container">
-
-                <!--Logo Section-->
-                <div class="logo-section">
-                    <img src="Images/Charles Greenway logo.png" alt="website Logo" width="120">
-                    <h1>Charles Greenway</h1>
-                </div>
-
-            
-
-                <!--Navigation-->
-                <div class="nav-section">
-                    <nav class="nav" id="nav">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="enquiry.html">Enquiry</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
+            <div class="logo-section">
+                <img src="Images/Charles Greenway logo.png" alt="website Logo" width="120">
+                <h1>Charles Greenway</h1>
             </div>
 
-        </header>
-
-        <!--Main Content-->
-        <main>
-
-            <section class="enquiry-section">
-
-                <div class="content-box">
-
-                    <h2>Enquiry</h2>
-
-                    <p>Please fill in the form below to enquire about our services.</p>
-
-                    <!--Enquiry Form-->
-                    <form class="enquiry-form">
-
-                        <!--Full Name-->
-                        <div class="form-group">
-                            <label>Full Name</label><br>
-                            <input type="text" name="name" required>
-                        </div>
-
-                        <br>
-
-                        <!--Email-->
-                        <div class="form-group">
-                            <label>Email</label><br>
-                            <input type="email" name="email" required>
-                        </div>
-
-                        <br>
-
-                        <!--Phone Number-->
-                        <div class="form-group">
-                            <label>Phone Number</label><br>
-                            <input type="tel" name="phone" required>
-                        </div>
-
-                        <br>
-
-                        <!--Service Selection-->
-                        <div class="form-group">
-                            <label>Select Services</label><br>
-                            <select>
-                                <option>Lawn mowing and general garden cleaning</option>
-                                <option>Plant watering and maintenance</option>
-                                <option>Tree, hedge and bush trimming</option>
-                                <option>Weed removal and soil care</option>
-                                <option>Pest control and plant protection</option>
-                            </select>
-                        </div>
-
-                        <br>
-
-                        <!--Message-->
-                        <div class="form-group">
-                            <label>Message</label><br>
-                            <textarea rows="5" placeholder="Enter your message"></textarea>
-                        </div>
-
-                        <br>
-
-                        <!--Submit Button-->
-                        <div class="button-section">
-                            <button type="submit">Submit Enquiry</button>
-                        </div>
-
-                    </form>
-
-                </div>
-
-            </section>
-
-        </main>
-
-        <!--Footer-->
-        <footer>
-
-            <div class="footer-container">
-                <p>&copy; 2026 Website Project/POE</p>
+            <div class="nav-section">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </nav>
             </div>
 
-        </footer>
+        </div>
+    </header>
 
-    </div>
+    <!-- MAIN -->
+    <main>
 
-    
+        <!-- CONTACT INFO -->
+        <section class="contact-section">
+            <div class="content-box">
+
+                <h2>Contact Us</h2>
+
+                <p><strong>Email:</strong> charlesgreenway@gmail.com</p>
+                <p><strong>Phone:</strong> 082 379 3761</p>
+
+            </div>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section class="form-section">
+            <div class="content-box">
+
+                <h3>Send Us a Message</h3>
+
+                <form id="contactForm">
+
+                    <label for="contactName">Name</label>
+                    <input type="text" id="contactName" name="name" required>
+
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" name="email" required>
+
+                    <!-- REQUIRED FOR RUBRIC -->
+                    <label for="messageType">Message Type</label>
+                    <select id="messageType" name="type" required>
+                        <option value="">Select Type</option>
+                        <option value="General Enquiry">General Enquiry</option>
+                        <option value="Quote Request">Quote Request</option>
+                        <option value="Feedback">Feedback</option>
+                    </select>
+
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send Message</button>
+
+                    <!-- ERROR MESSAGE PLACEHOLDER -->
+                    <p id="contactError" style="color:red;"></p>
+
+                </form>
+
+            </div>
+        </section>
+
+        <!-- LOCATION -->
+        <section class="location-section">
+            <div class="content-box">
+
+                <h2>Find Us At</h2>
+
+                <h3>Cape Town Branch</h3>
+                <p>12 Green Street, Cape Town</p>
+
+                <iframe
+                    src="https://www.google.com/maps?q=Cape%20Town&output=embed"
+                    width="100%" height="300" style="border:0;">
+                </iframe>
+
+                <br><br>
+
+                <h3>Johannesburg Branch</h3>
+                <p>45 Garden Road, Johannesburg</p>
+
+                <iframe
+                    src="https://www.google.com/maps?q=Johannesburg&output=embed"
+                    width="100%" height="300" style="border:0;">
+                </iframe>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Website Project/POE</p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="Java Script/script.js"></script>
 
 </body>
 </html>
