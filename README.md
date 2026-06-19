@@ -464,20 +464,43 @@ Research was used to gather:
 | 17 May 2026   | and added content and reserch to proposal  |
 | Date        | Description                                                                                                                      |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| 17 May 2026 | Created initial website structure with HTML pages (Home, About, Services, Enquiry, Contact, Gallery) and basic navigation system |
-| 18 May 2026 | Styled website using CSS including header, footer, layout system, typography, and colour variables                               |
-| 18 May 2026 | Improved responsive design using media queries for tablet and mobile compatibility                                               |
-| 18 May 2026 | Built enquiry form with HTML form elements (input, select, textarea, button)                                                     |
-| 18 May 2026 | Added JavaScript form validation for enquiry page (name, email, phone validation)                                                |
-| 18 May 2026 | Added JavaScript contact form validation with required field checks and submission handling                                      |
-| 18 May 2026 | Implemented dynamic footer JavaScript displaying current date and year                                                           |
-| 18 May 2026 | Created interactive image gallery using JavaScript DOM manipulation                                                              |
-| 18 May 2026 | Added lightbox functionality allowing images to open in enlarged view with navigation controls (next/previous)                   |
-| 18 May 2026 | Fixed gallery JavaScript to correctly use existing HTML images instead of dynamically generating broken image paths              |
-| 18 May 2026 | Improved gallery CSS layout to display images in a 4-column grid with responsive scaling for tablet and mobile                   |
-| 18 May 2026 | Ensured all gallery images display in uniform size using object-fit: cover for consistent UI                                     |
-| 18 May 2026 | Created SEO files including sitemap.xml and robots.txt to improve search engine indexing                                         |
-| 18 May 2026 | Optimised website for SEO by structuring pages for indexing and improving crawlability                                           |
+| 16 June 2026 | Reviewed Part 2 feedback and implemented corrections to styling consistency, responsive layouts, navigation usability, accessibility, and overall user experience |
+| 16 June 2026 | Refined CSS structure and optimised page layouts to improve maintainability, readability, and visual consistency across the website |
+| 17 June 2026 | Created and linked external JavaScript files to add dynamic functionality and enhance website interactivity |
+| 17 June 2026 | Implemented responsive hamburger menu navigation for tablet and mobile devices using JavaScript and CSS |
+| 17 June 2026 | Added interactive navigation functionality including menu toggling, active states, and improved mobile accessibility |
+| 17 June 2026 | Added CSS animations, transitions, and hover effects to buttons, navigation links, gallery items, and call-to-action sections |
+| 17 June 2026 | Embedded multiple Google Maps locations on the Contact page to provide location-based information and improve customer accessibility |
+| 17 June 2026 | Created interactive image gallery using JavaScript DOM manipulation to dynamically manage and display gallery content |
+| 17 June 2026 | Added lightbox functionality allowing images to open in enlarged view with next and previous navigation controls |
+| 17 June 2026 | Fixed gallery JavaScript to correctly use existing HTML images instead of dynamically generating broken image paths |
+| 17 June 2026 | Implemented advanced DOM manipulation techniques to dynamically update website content and improve user interaction |
+| 18 June 2026 | Added dynamic content functionality using JavaScript to update website content without requiring page refreshes |
+| 18 June 2026 | Implemented AJAX functionality for asynchronous form processing and improved user experience during form submissions |
+| 18 June 2026 | Added service search and filtering functionality allowing users to quickly locate relevant services on the website |
+| 18 June 2026 | Built enquiry form with HTML form controls including text fields, email fields, phone inputs, dropdown menus, text areas, and submit buttons |
+| 18 June 2026 | Added JavaScript validation for enquiry form including required field checks, email verification, phone number validation, character limits, and error handling |
+| 18 June 2026 | Implemented enquiry processing functionality providing users with immediate feedback regarding service availability and enquiry submissions |
+| 18 June 2026 | Developed contact form with customer information fields, message categories, subject selection, and detailed message submission functionality |
+| 18 June 2026 | Added JavaScript contact form validation with required field checks, input verification, format validation, and user-friendly error messages |
+| 18 June 2026 | Implemented contact form email functionality allowing users to send validated messages directly to the business email address |
+| 18 June 2026 | Implemented dynamic footer JavaScript displaying the current date and year automatically across all website pages |
+| 18 June 2026 | Performed testing and debugging of all JavaScript functionality to ensure reliable performance across all website pages |
+| 19 June 2026 | Added SEO title tags to all website pages using page-specific keywords and optimised page titles |
+| 19 June 2026 | Created and optimised meta descriptions for all website pages to improve search engine visibility and click-through rates |
+| 19 June 2026 | Added relevant meta keywords relating to gardening, landscaping, lawn care, garden maintenance, and outdoor services |
+| 19 June 2026 | Improved heading structure using H1, H2, and H3 tags to enhance content hierarchy and SEO performance |
+| 19 June 2026 | Added descriptive image file names and alt text to all website images to improve accessibility and search engine indexing |
+| 19 June 2026 | Improved internal linking structure between pages to strengthen navigation and search engine crawlability |
+| 19 June 2026 | Created clean and descriptive URL structure to improve usability and search engine optimisation |
+| 19 June 2026 | Created robots.txt file to guide search engine crawlers and improve website indexing management |
+| 19 June 2026 | Created sitemap.xml file containing all website pages to improve search engine discovery and indexing |
+| 19 June 2026 | Optimised website for SEO by structuring pages for indexing, improving crawlability, and enhancing mobile friendliness |
+| 19 June 2026 | Optimised website performance through image optimisation, efficient CSS organisation, compressed assets, and removal of unnecessary code |
+| 19 June 2026 | Conducted cross-browser compatibility testing to ensure consistent functionality across modern web browsers |
+| 19 June 2026 | Performed responsive testing across desktop, tablet, and mobile screen sizes to verify optimal user experience |
+| 19 June 2026 | Deployed the completed Charles Greenway website to Netlify and tested all pages, forms, navigation links, search features, maps, and media content in the live environment |
+| 19 June 2026 | Updated README.md with Part 3 functionality details, deployment information, SEO implementation details, references, screenshots, and complete project changelog |                                         |
 
 ---
 
