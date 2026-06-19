@@ -355,7 +355,7 @@ Research was used to gather:
 
 # Sitemap
 
-> Insert sitemap image here.
+![sitemap image](Images/Sitemap.png)
 
 !
 
@@ -385,7 +385,7 @@ Research was used to gather:
 ![phone image](Images/phone.png)
 !
 # Images and Resources Used
-![sitemap image](Images/Sitemap.png)
+
 ## Images
 
 | Resource           | Source          |
